@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание 1 — Цифры 4 и 3</title>
+    <style>
+        /* Единственный цвет — #2c3e50 */
+        /* Свойства margin, padding, position, left/top/right/bottom запрещены */
+
+        html, body {
+            height: 100%;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #ecf0f1;
+        }
+
+        /* Контейнер для двух цифр */
+        .digits {
+            display: flex;
+            flex-direction: row;
+            gap: 40px; /* gap разрешён, это не margin/padding */
+        }
+
+        /* Одна цифра — колонка из 5 строк */
+        .digit {
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Строка — 3 квадрата */
+        .row {
+            display: flex;
+            flex-direction: row;
+        }
+
+        /* Квадратная ячейка */
+        .cell {
+            width: 40px;
+            height: 40px;
+            box-sizing: border-box;
+            border: 1px solid #bdc3c7; /* тонкая сетка, чтобы видеть пустые клетки */
+        }
+
+        /* Закрашенная клетка — единственный цвет */
+        .filled {
+            background-color: #2c3e50;
+        }
+
+        /* Пустая клетка — прозрачная */
+        .empty {
+            background-color: transparent;
+        }
+    </style>
+</head>
+<body>
+    <div class="digits">
+
+        <!-- ЦИФРА 4 -->
+        <div class="digit">
+            <div class="row">
+                <div class="cell filled"></div>
+                <div class="cell empty"></div>
+                <div class="cell filled"></div>
+            </div>
+            <div class="row">
+                <div class="cell filled"></div>
+                <div class="cell empty"></div>
+                <div class="cell filled"></div>
+            </div>
+            <div class="row">
+                <div class="cell filled"></div>
+                <div class="cell filled"></div>
+                <div class="cell filled"></div>
+            </div>
+            <div class="row">
+                <div class="cell empty"></div>
+                <div class="cell empty"></div>
+                <div class="cell filled"></div>
+            </div>
+            <div class="row">
+                <div class="cell empty"></div>
+                <div class="cell empty"></div>
+                <div class="cell filled"></div>
+            </div>
+        </div>
+
+        <!-- ЦИФРА 3 -->
+        <div class="digit">
+            <div class="row">
+                <div class="cell filled"></div>
+                <div class="cell filled"></div>
+                <div class="cell filled"></div>
+            </div>
+            <div class="row">
+                <div class="cell empty"></div>
+                <div class="cell empty"></div>
+                <div class="cell filled"></div>
+            </div>
+            <div class="row">
+                <div class="cell filled"></div>
+                <div class="cell filled"></div>
+                <div class="cell filled"></div>
+            </div>
+            <div class="row">
+                <div class="cell empty"></div>
+                <div class="cell empty"></div>
+                <div class="cell filled"></div>
+            </div>
+            <div class="row">
+                <div class="cell filled"></div>
+                <div class="cell filled"></div>
+                <div class="cell filled"></div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

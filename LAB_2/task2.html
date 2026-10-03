@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание 2 — Вариант 1</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #fff;
+        }
+
+        /* Каждая полоса — горизонтальный блок */
+        .strip {
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+        }
+
+        /* Базовая ячейка */
+        .cell {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            font-size: 12px;
+            text-align: center;
+            word-break: break-all;
+            height: 150px;
+        }
+
+        /* Высокие ячейки */
+        .h-2 { height: 300px; }
+        .h-3 { height: 450px; }
+
+        /* Колонка для вложенных ячеек */
+        .col {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        .col-row {
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+        }
+
+        /* ========================================= */
+        /* 12-КОЛОНОЧНАЯ СЕТКА (общая для всех)      */
+        /* ========================================= */
+        .c-1  { width: 8.333%; }
+        .c-2  { width: 16.666%; }
+        .c-3  { width: 25%; }
+        .c-4  { width: 33.333%; }
+        .c-5  { width: 41.666%; }
+        .c-6  { width: 50%; }
+        .c-7  { width: 58.333%; }
+        .c-8  { width: 66.666%; }
+        .c-9  { width: 75%; }
+        .c-10 { width: 83.333%; }
+        .c-11 { width: 91.666%; }
+        .c-12 { width: 100%; }
+
+        /* ========================================= */
+        /* ЦВЕТА                                     */
+        /* ========================================= */
+        .bg-cd5c5c { background: #CD5C5C; }
+        .bg-dc143c { background: #DC143C; }
+        .bg-8b0000 { background: #8B0000; }
+        .bg-ffc0cb { background: #FFC0CB; color: #333; }
+        .bg-ff69b4 { background: #FF69B4; }
+        .bg-c71585 { background: #C71585; }
+        .bg-adff2f { background: #ADFF2F; color: #333; }
+        .bg-00ff00 { background: #00FF00; color: #333; }
+        .bg-32cd32 { background: #32CD32; }
+        .bg-00fa9a { background: #00FA9A; color: #333; }
+        .bg-2e8b57 { background: #2E8B57; }
+        .bg-006400 { background: #006400; }
+        .bg-9acd32 { background: #9ACD32; color: #333; }
+        .bg-808000 { background: #808000; }
+        .bg-66cdaa { background: #66CDAA; color: #333; }
+        .bg-556b2f { background: #556B2F; }
+        .bg-008080 { background: #008080; }
+        .bg-ffa07a { background: #FFA07A; color: #333; }
+        .bg-ff4500 { background: #FF4500; }
+        .bg-bc8f8f { background: #BC8F8F; }
+        .bg-f4a460 { background: #F4A460; color: #333; }
+        .bg-d2691e { background: #D2691E; }
+        .bg-8b4513 { background: #8B4513; }
+        .bg-a52a2a { background: #A52A2A; }
+    </style>
+</head>
+<body>
+
+    <!-- ПОЛОСА 1-->
+    <div class="strip">
+        <div class="cell bg-cd5c5c c-6">#CD5C5C</div>
+        <div class="cell bg-dc143c c-3">#DC143C</div>
+        <div class="cell bg-8b0000 c-3">#8B0000</div>
+    </div>
+
+    <!-- ПОЛОСА 2 -->
+    <div class="strip">
+        <div class="cell bg-ffc0cb c-12">#FFC0CB</div>
+    </div>
+
+    <!-- ПОЛОСА 3 -->
+    <div class="strip">
+        <div class="cell bg-ff69b4 c-4">#FF69B4</div>
+        <div class="cell bg-c71585 c-8">#C71585</div>
+    </div>
+
+    <!-- ПОЛОСА 4-6 -->
+    <div class="strip" style="display: flex; flex-wrap: nowrap;">
+
+        <div class="col" style="width: 75%;">
+            <div style="display: flex; flex-wrap: nowrap; width: 100%;">
+                <div class="cell bg-adff2f" style="width: 75%; height: 300px;">#ADFF2F</div>
+                <div class="col" style="width: 25%;">
+                    <div class="cell bg-32cd32" style="width: 100%;">#32CD32</div>
+                    <div class="cell bg-00fa9a" style="width: 100%;">#00FA9A</div>
+                </div>
+            </div>
+            <div style="display: flex; flex-wrap: nowrap; width: 100%;">
+                <div class="cell bg-2e8b57" style="width: 25%;">#2E8B57</div>
+                <div class="cell bg-006400" style="width: 25%;">#006400</div>
+                <div class="cell bg-9acd32" style="width: 25%;">#9ACD32</div>
+                <div class="cell bg-808000" style="width: 25%;">#808000</div>
+            </div>
+
+        </div>
+
+        <div class="col" style="width: 25%;">
+            <div class="cell bg-adff2f" style="width: 100%; height: 450px;">#ADFF2F</div>
+        </div>
+
+    </div>
+
+    <!-- ПОЛОСА 7 -->
+    <div class="strip">
+        <div class="cell c-1" style="background: transparent;"></div>
+        <div class="cell bg-ffa07a c-2">#FFA07A</div>
+        <div class="cell c-2" style="background: transparent;"></div>
+        <div class="cell bg-ff4500 c-6">#FF4500</div>
+        <div class="cell c-1" style="background: transparent;"></div>
+    </div>
+
+    <!-- ПОЛОСА 8-9 -->
+    <div class="strip" style="display: flex; flex-wrap: nowrap;">
+        <div class="cell bg-bc8f8f" style="width: 25%; height: 300px;">#BC8F8F</div>
+        <div class="col" style="width: 50%;">
+            <div class="cell bg-f4a460" style="width: 100%;">#F4A460</div>
+            <div style="display: flex; flex-wrap: nowrap; width: 100%;">
+                <div class="cell bg-8b4513" style="width: 50%;">#8B4513</div>
+                <div class="cell bg-a52a2a" style="width: 50%;">#A52A2A</div>
+            </div>
+        </div>
+        <div class="cell bg-d2691e" style="width: 25%; height: 300px;">#D2691E</div>
+    </div>
+</body>
+</html>
