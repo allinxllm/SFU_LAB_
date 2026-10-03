@@ -1,7 +1,0 @@
-echo "# SFU_LAB_" >> README.md 
-git init
-git add README.md 
-git commit -m "первая фиксация"
-ветвь git -M main
-git remote add origin https://github.com/allinxllm/SFU_LAB_.git
-git push -u origin main
