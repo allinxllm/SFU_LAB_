@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Язык программирования Java</title>
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="page-header">
+    <h1>Язык программирования Java</h1>
+</header>
+
+<nav id="toc">
+    <h2>Содержание</h2>
+    <ul>
+        <li><a href="#history">История создания</a></li>
+        <li><a href="#overview">Краткий обзор языка</a></li>
+        <li><a href="#examples">Примеры кода</a></li>
+        <li><a href="#used">Использованные теги и CSS-свойства</a></li>
+    </ul>
+</nav>
+
+<hr>
+
+<section id="history">
+    <h2>1. История создания</h2>
+
+    <img src="img/gosling.jpg" alt="Джеймс Гослинг" class="img-left" width="260">
+
+    <p><strong>Java</strong> — объектно-ориентированный язык программирования, разработанный компанией
+       <strong>Sun Microsystems</strong> в 1995 году. Изначально проект носил название
+       <em>Oak</em> и создавался для программирования бытовых электронных устройств.</p>
+
+    <p>Руководителем проекта был канадский инженер <strong>Джеймс Гослинг</strong>. В 1995 году язык был
+       переименован в Java и официально представлен публике. Название было выбрано в честь сорта кофе
+       с острова Ява.</p>
+
+    <p>Ключевой особенностью Java стал принцип <strong>«Write Once, Run Anywhere»</strong> — «напиши один раз,
+       запускай где угодно». Это стало возможным благодаря <strong>JVM</strong> (Java Virtual Machine) —
+       виртуальной машине, которая исполняет байт-код независимо от операционной системы.</p>
+
+    <p>Подробнее о языке можно прочитать в
+       <a href="https://ru.wikipedia.org/wiki/Java" target="_blank">Википедии</a>.</p>
+
+    <div class="clearfix"></div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Год</th>
+                <th>Событие</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>1991</td><td>Начало проекта Oak в Sun Microsystems</td></tr>
+            <tr><td>1995</td><td>Официальный релиз Java</td></tr>
+            <tr><td>1996</td><td>Выпуск JDK 1.0</td></tr>
+            <tr><td>2004</td><td>Java 5: generics, аннотации</td></tr>
+            <tr><td>2010</td><td>Oracle приобретает Sun Microsystems</td></tr>
+            <tr><td>2014</td><td>Java 8: лямбда-выражения, Stream API</td></tr>
+            <tr><td>2021</td><td>Java 17 — версия с долгосрочной поддержкой</td></tr>
+        </tbody>
+    </table>
+</section>
+
+<hr>
+
+<section id="overview">
+    <h2>2. Краткий обзор языка</h2>
+
+    <img src="img/java-logo.png" alt="Логотип Java" class="img-right" width="200">
+
+    <p>Java относится к классу <strong>компилируемых языков</strong>. Исходный код компилируется в
+       <em>байт-код</em>, который затем исполняется виртуальной машиной JVM. Это обеспечивает
+       переносимость программ между различными платформами.</p>
+
+    <p>Язык поддерживает все основные принципы <strong>объектно-ориентированного программирования</strong>:</p>
+
+    <ol>
+        <li>Инкапсуляция — сокрытие внутренней реализации объекта.</li>
+        <li>Наследование — создание новых классов на основе существующих.</li>
+        <li>Полиморфизм — способность объектов иметь различную реализацию.</li>
+    </ol>
+
+    <p>Java строго типизирован: каждая переменная должна быть объявлена с указанием типа данных.
+       Основные типы данных:</p>
+
+    <ul>
+        <li><code>int</code> — целые числа</li>
+        <li><code>double</code> — числа с плавающей точкой</li>
+        <li><code>boolean</code> — логический тип (true/false)</li>
+        <li><code>char</code> — символы Unicode</li>
+        <li><code>String</code> — строки (ссылочный тип)</li>
+    </ul>
+
+    <p>Популярные области применения Java:</p>
+
+    <ul class="img-marker">
+        <li>Серверные приложения и микросервисы</li>
+        <li>Android-приложения</li>
+        <li>Банковские и корпоративные системы</li>
+        <li>Big Data (Hadoop, Spark)</li>
+    </ul>
+
+    <p>Официальная документация доступна на сайте
+       <a href="https://docs.oracle.com/javase/" target="_blank">Oracle</a>.</p>
+
+    <div class="clearfix"></div>
+</section>
+
+<hr>
+
+<section id="examples">
+    <h2>3. Примеры кода</h2>
+
+    <img src="img/code.png" alt="Скриншот кода Java" class="img-center" width="500">
+
+    <h3>Программа «Hello, World!»</h3>
+<pre><code><span class="kw">public class</span> <span class="cls">HelloWorld</span> {
+    <span class="kw">public static void</span> <span class="fn">main</span>(<span class="cls">String</span>[] args) {
+        <span class="cm">// Вывод строки на консоль</span>
+        <span class="cls">System</span>.out.<span class="fn">println</span>(<span class="str">"Hello, World!"</span>);
+    }
+}</code></pre>
+
+    <h3>Условные операторы</h3>
+<pre><code><span class="kw">public class</span> <span class="cls">Example</span> {
+    <span class="kw">public static void</span> <span class="fn">main</span>(<span class="cls">String</span>[] args) {
+        <span class="kw">int</span> number = <span class="num">42</span>;
+        <span class="kw">if</span> (number &gt; <span class="num">0</span>) {
+            <span class="cls">System</span>.out.<span class="fn">println</span>(<span class="str">"Положительное"</span>);
+        } <span class="kw">else</span> {
+            <span class="cls">System</span>.out.<span class="fn">println</span>(<span class="str">"Отрицательное"</span>);
+        }
+    }
+}</code></pre>
+
+    <h3>Цикл и массивы</h3>
+<pre><code><span class="kw">public class</span> <span class="cls">ArrayDemo</span> {
+    <span class="kw">public static void</span> <span class="fn">main</span>(<span class="cls">String</span>[] args) {
+        <span class="kw">int</span>[] numbers = {<span class="num">10</span>, <span class="num">20</span>, <span class="num">30</span>, <span class="num">40</span>};
+        <span class="kw">int</span> sum = <span class="num">0</span>;
+        <span class="kw">for</span> (<span class="kw">int</span> i = <span class="num">0</span>; i &lt; numbers.length; i++) {
+            sum += numbers[i];
+        }
+        <span class="cls">System</span>.out.<span class="fn">println</span>(<span class="str">"Сумма: "</span> + sum);
+    }
+}</code></pre>
+
+    <h3>Класс и объект</h3>
+<pre><code><span class="kw">public class</span> <span class="cls">Student</span> {
+    <span class="kw">private</span> <span class="cls">String</span> name;
+    <span class="kw">private int</span> age;
+
+    <span class="kw">public</span> <span class="fn">Student</span>(<span class="cls">String</span> name, <span class="kw">int</span> age) {
+        <span class="kw">this</span>.name = name;
+        <span class="kw">this</span>.age = age;
+    }
+
+    <span class="kw">public void</span> <span class="fn">introduce</span>() {
+        <span class="cls">System</span>.out.<span class="fn">println</span>(<span class="str">"Меня зовут "</span> + name);
+    }
+}</code></pre>
+
+    <p>Больше примеров — в
+       <a href="https://docs.oracle.com/javase/tutorial/" target="_blank">официальном туториале Oracle</a>
+       и вернуться к <a href="#toc">содержанию</a>.</p>
+</section>
+
+<hr>
+
+<section id="used">
+    <h2>4. Использованные теги HTML</h2>
+    <ul class="tags-list">
+        <li>&lt;html&gt;, &lt;head&gt;, &lt;meta&gt;, &lt;title&gt;, &lt;link&gt;</li>
+        <li>&lt;body&gt;, &lt;header&gt;, &lt;nav&gt;, &lt;section&gt;, &lt;footer&gt;</li>
+        <li>&lt;h1&gt;, &lt;h2&gt;, &lt;h3&gt;, &lt;p&gt;, &lt;strong&gt;, &lt;em&gt;</li>
+        <li>&lt;a&gt;, &lt;img&gt;, &lt;hr&gt;, &lt;br&gt;, &lt;div&gt;</li>
+        <li>&lt;ol&gt;, &lt;ul&gt;, &lt;li&gt;</li>
+        <li>&lt;table&gt;, &lt;thead&gt;, &lt;tbody&gt;, &lt;tr&gt;, &lt;th&gt;, &lt;td&gt;</li>
+        <li>&lt;pre&gt;, &lt;code&gt;, &lt;span&gt;</li>
+    </ul>
+
+    <h2>Использованные CSS-свойства</h2>
+    <ul class="tags-list">
+        <li>font-family, font-size, font-weight, font-style, line-height</li>
+        <li>color, background-color, background-image, background-repeat</li>
+        <li>background-position, background-size</li>
+        <li>text-align, text-decoration, text-indent, text-transform</li>
+        <li>letter-spacing, word-spacing</li>
+        <li>margin, margin-top, margin-bottom, margin-left, margin-right</li>
+        <li>padding, padding-top, padding-bottom, padding-left, padding-right</li>
+        <li>border, border-radius, border-collapse, border-spacing</li>
+        <li>width, height, max-width</li>
+        <li>float, clear, display, overflow</li>
+        <li>list-style, list-style-type, list-style-image</li>
+        <li>position, box-shadow, opacity, transition</li>
+    </ul>
+</section>
+
+<footer class="page-footer">
+    <p>&copy; 2026 Лабораторная работа №1. Язык Java.</p>
+</footer>
+
+</body>
+</html>
