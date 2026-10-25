@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Удар по бильярдному шару</title>
+  <link rel="stylesheet" href="billiard.css">
+</head>
+<body>
+  <div class="table">
+    <div class="cue" id="cue"></div>
+    <div class="ball" id="ball">
+      <span class="stripe"></span>
+      <span class="number">8</span>
+      <span class="shine"></span>
+    </div>
+    <button class="hit-btn" onclick="hit()">Ударить</button>
+  </div>
+
+  <script>
+    function hit() {
+      const ball = document.getElementById('ball');
+      const cue  = document.getElementById('cue');
+      ball.classList.remove('roll');
+      cue.classList.remove('strike');
+      // перезапуск анимации
+      void ball.offsetWidth;
+      ball.classList.add('roll');
+      cue.classList.add('strike');
+    }
+  </script>
+</body>
+</html>
